@@ -21,12 +21,18 @@
     <ClCompile Include="boiler.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="animal.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Task.MD" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boiler.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="animal.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
