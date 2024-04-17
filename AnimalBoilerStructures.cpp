@@ -38,20 +38,37 @@ int main()
 	cin >> boiler.Power;
 	cout << endl;
 
-
+	cout << "Point the boiler volume: ";
+	cin >> boiler.Volume;
+	cout << endl;
 	
+
+	cout << "Point the boiler Heating temperature: ";
+	cin >> boiler.HeatingTemperature;
+	cout << endl;
 #pragma endregion
 
 #pragma region Печать бойлера
-	cout << "Builded boiler" << endl;
 	cout << "\n";
+	cout << "Builded boiler" << endl;	
+
 	cout << "---->";
 	cout << "Boiler name : " << boiler.FirmName << endl;
+
 	cout << "---->";
 	cout << "Boiler color : ";
 	setColor(boiler.Color);
-	cout << "This";
-	setColor(RESET_COLOR);
+	cout << "This" << endl;
+	setColor(RESET_COLOR);	
+
+	cout << "---->";
+	cout << "Boiler power : " << boiler.Power << " kWt "<< endl;
+	
+	cout << "---->";
+	cout << "Boiler volume : " << boiler.Volume << " cap. " << endl;
+	
+	cout << "---->";
+	cout << "Boiler Heating temperature : " << boiler.HeatingTemperature << " °C " << endl;
 	cout << "\n";
 #pragma endregion
 
