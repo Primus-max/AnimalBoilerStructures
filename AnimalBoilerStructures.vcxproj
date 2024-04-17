@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AnimalBoilerStructures.cpp" />
+    <ClCompile Include="boiler.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Task.MD" />

@@ -21,6 +21,4 @@ struct  Boiler
 	short HeatingTemperature;
 };
 
-void setColor(BoilerColor color) {
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
-}
+void setColor(BoilerColor color);
