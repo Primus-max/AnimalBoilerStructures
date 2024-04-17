@@ -1,25 +1,33 @@
 #include "animal.h"
 #include <iostream>
 #include <cstring>
+
 using namespace std;
 
-const char* animalClassToString(AnimalClass animalClass) {
-    switch (animalClass) {
-    case Mammal:
-        return "Mammal";
-    case Bird:
-        return "Bird";
-    case Reptile:
-        return "Reptile";
-    case Amphibian:
-        return "Amphibian";
-    case Fish:
-        return "Fish";
+const char* animalTypeToString(AnimalType animalType) {
+    switch (animalType) {
+    case Dog:
+        return "Dog";
+    case Cat:
+        return "Cat";
+    case Lion:
+        return "Lion";
+    case Frog:
+        return "Frog";
+    case Shark:
+        return "Shark";
     default:
-        return "Unknown class";
+        return "Unknown type";
     }
 }
 
+const char* soundsAnimals [COUNT_TYPES] = {
+    "Waf Waf",      // Dog
+    "Meow",         // Cat
+    "Roar",         // Lion
+    "Croak",        // Frog
+    "Theme"         // Shark
+};
 
 Animal createAnimal() {
     Animal newAnimal;
@@ -30,15 +38,15 @@ Animal createAnimal() {
     cout << "Enter name for animal: ";
     cin.getline(newAnimal.name, sizeof(newAnimal.species));
 
-    cout << "Choose class for animal: ";
-    for (size_t i = 0; i < COUNT_CLASSES; ++i) {
-        AnimalClass animalClass = static_cast<AnimalClass>(i);
-        cout << "Enter " << i + 1 << " to choose " << animalClassToString(animalClass) << " class" << endl;
+    cout << "Choose type for animal: " << endl;
+    for (size_t i = 0; i < COUNT_TYPES; ++i) {
+        AnimalType animalClass = static_cast<AnimalType>(i);
+        cout << "Enter " << i + 1 << " to choose " << animalTypeToString(animalClass) << " class" << endl;
     }
 
     int choiceClassAnimal = 0;
     cin >> choiceClassAnimal;
-    newAnimal.animalClass = static_cast<AnimalClass>(choiceClassAnimal);
+    newAnimal.animalType = static_cast<AnimalType>(choiceClassAnimal - 1);
 
     return newAnimal;
 }
@@ -46,5 +54,9 @@ Animal createAnimal() {
 void Animal::printAnimal() {
     cout << "Species: " << species << endl;
     cout << "Name: " << name << endl;
-    cout << "Class: " << animalClassToString(animalClass) << endl;
+    cout << "Type: " << animalTypeToString(animalType) << endl;
+}
+
+void Animal::playSound() {
+    cout << animalTypeToString(animalType) << " say " << " : " << soundsAnimals[animalType] << endl;
 }

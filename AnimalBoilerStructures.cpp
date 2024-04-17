@@ -75,4 +75,5 @@ int main()
 
 	Animal animal = createAnimal();
 	animal.printAnimal();
+	animal.playSound();
 }

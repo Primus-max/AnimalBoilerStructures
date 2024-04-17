@@ -27,6 +27,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Task.MD" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boiler.h">
